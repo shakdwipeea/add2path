@@ -1,6 +1,6 @@
 {
   "name": "add2path",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A nodejs cmd utility to add directories to $PATH",
   "main": "add2path",
   "scripts": {
@@ -9,6 +9,9 @@
   "repository": {
     "type": "git",
     "url": "github.com/shakdwipeea/add2path"
+  },
+  "bin": {
+    "add2path": "./add2path"
   },
   "author": "Akash Shakdwipeea",
   "license": "ISC"
