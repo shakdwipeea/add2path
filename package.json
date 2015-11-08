@@ -10,9 +10,7 @@
     "type": "git",
     "url": "github.com/shakdwipeea/add2path"
   },
-  "bin": {
-    "add2path": "./add2path"
-  },
+  "bin": "./add2path",
   "author": "Akash Shakdwipeea",
   "license": "ISC"
 }
