@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+
+//resume the process.stdin() as it is paused by default
+process.stdin.resume();
+
+var fs = require('fs'),
+	exec = require('child_process').exec,
+	path = "",
+	home = process.env.HOME;
+
+process.stdin.on('data', function  (data) {
+	path += data;
+});
+
+process.stdin.on('end', function  () {
+	path = path.split('\n')[0];
+
+	var text = 'export PATH=$PATH:' + path + '\n';
+
+	var bashrcLocation = home + '/.bashrc';
+
+	fs.appendFileSync(bashrcLocation, text);
+	
+	exec("source " + bashrcLocation, null);
+
+	console.log('Done');
+
+});
