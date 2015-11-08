@@ -1,6 +1,6 @@
 {
   "name": "add2path",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "A nodejs cmd utility to add directories to $PATH",
   "main": "add2path",
   "scripts": {
