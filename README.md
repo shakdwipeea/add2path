@@ -1,5 +1,5 @@
  [![npm version](https://badge.fury.io/js/add2path.svg)](https://badge.fury.io/js/add2path)
- [![npm downloads](https://img.shields.io/npm/dm/add2path.svg)](https://npmjs.org/package/add2path)
+ [![npm downloads](https://img.shields.io/npm/dt/add2path.svg)](https://npmjs.org/package/add2path)
   
 ## Add2Path
 A command line utility to add a directory to $PATH without any fuss.
