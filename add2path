@@ -2,7 +2,8 @@
 
 
 var fs = require('fs'),
-	exec = require('child_process').exec,
+	os = require('os');
+exec = require('child_process').exec,
 	path = "",
 	home = process.env.HOME;
 
@@ -11,7 +12,19 @@ path = path.split('\n')[0];
 
 var text = 'export PATH=$PATH:' + process.cwd() + '\n';
 
-var bashrcLocation = home + '/.bashrc';
+var bash_r;
+
+
+//For mac-osx => ./bash_profile and linux => ./bash_rc
+if (os.platform() == 'linux') {
+	bash_r = '/.bashrc';
+}
+else {
+	bash_r = '/.bash_profile';
+}
+
+
+var bashrcLocation = home + bash_r;
 
 fs.appendFileSync(bashrcLocation, text);
 
